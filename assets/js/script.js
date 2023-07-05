@@ -27,7 +27,8 @@ window.onload = function() {
 
     placeFood();
     document.addEventListener("keyup", changeDirection); // calls the function called changeDirection when an arrow key is pressed to move the snake - credit to ImKennyYip on GitHub
-    update();
+    //update();
+    setInterval(update, 1000/10); // runs the update function every 100 miliseconds to move the position of the snake on the board - credit to ImKennyYip on GitHub
 }
 
 // colors the board black upon loading - credit to ImKennyYip on GitHub
@@ -35,30 +36,32 @@ function update() {
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
 
-    // loads the color of the snake head to the board - credit to ImKennyYip on GitHub
-    context.fillStyle="orange"
+    // loads the color of the snake head and its velocity to the board - credit to ImKennyYip on GitHub
+    context.fillStyle="orange";
+    snakeX += velocityX;
+    snakeY += velocityY;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
 
     // loads the color of the food to the board - credit to ImKennyYip on GitHub
     context.fillStyle="red";
-    context.fillRect(foodX, foodY, blockSize, blockSize)
+    context.fillRect(foodX, foodY, blockSize, blockSize);
 }
 
 // function used to control the direction and movement of the snake - credit to ImKennyYip on GitHub
 function changeDirection(e) {
-    if (e.code === "ArrowUp") {
+    if (e.code == "ArrowUp") {
         velocityX = 0;
-        velocityY = -1
+        velocityY = -1;
     }
-    else if (e.code === "ArrowDown") {
+    else if (e.code == "ArrowDown") {
         velocityX = 0;
         velocityY = 1;
     }
-    else if (e.code === "ArrowLeft") {
+    else if (e.code == "ArrowLeft") {
         velocityX = -1;
         velocityY = 0;
     }
-    else if (e.code === "ArrowRight") {
+    else if (e.code == "ArrowRight") {
         velocityX = 1;
         velocityY = 0;
     }
