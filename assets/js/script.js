@@ -10,6 +10,10 @@ var context;
 var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
 
+// adds the speed of the snakes movement - credit to ImKennyYip on GitHub
+var velocityX = 0;
+var velocityY = 0;
+
 // loads the position of the food onto the board - credit to ImKennyYip on GitHub
 var foodX;
 var foodY;
@@ -22,6 +26,7 @@ window.onload = function() {
     context = board.getContext("2d"); //used to draw on the board
 
     placeFood();
+    document.addEventListener("keyup", changeDirection); // calls the function called changeDirection when an arrow key is pressed to move the snake - credit to ImKennyYip on GitHub
     update();
 }
 
@@ -37,6 +42,26 @@ function update() {
     // loads the color of the food to the board - credit to ImKennyYip on GitHub
     context.fillStyle="red";
     context.fillRect(foodX, foodY, blockSize, blockSize)
+}
+
+// function used to control the direction and movement of the snake - credit to ImKennyYip on GitHub
+function changeDirection(e) {
+    if (e.code === "ArrowUp") {
+        velocityX = 0;
+        velocityY = -1
+    }
+    else if (e.code === "ArrowDown") {
+        velocityX = 0;
+        velocityY = 1;
+    }
+    else if (e.code === "ArrowLeft") {
+        velocityX = -1;
+        velocityY = 0;
+    }
+    else if (e.code === "ArrowRight") {
+        velocityX = 1;
+        velocityY = 0;
+    }
 }
 
 // a function used to randomly place the food on different parts of the board - credit to ImKennyYip on GitHub
