@@ -1,1 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Orbit&display=swap');
+
+
+/*-- Global style --*/
+body {
+    width: 100%;
+    font-family: orbit, sans-serif;
+    text-align: center;
+    background: white;
+    box-sizing: border-box;
+}
+
+#main-heading {
+    font-family: kablammo;
+    font-size: 300%;
+    background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
