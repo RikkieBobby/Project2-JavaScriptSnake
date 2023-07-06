@@ -16,9 +16,28 @@
 
     <canvas id="board"></canvas>
 
-    <h2 id="score">Score: <span id="score-counter">0</span></h2>
+    <h2 id="score">Score: <span id="counter">0</span></h2>
 
-    <button id="restart">Restart</button>
+    <button id="restart" onclick="document.location.reload()">Restart</button> <!--the onclick reloads the page when the button is clicked-->
+
+    <footer class="row col-12">
+        <div class="col-12">
+            <ul>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopner" aria-label="visit facebook (open in a new tab)"><i class="fa-brands fa-square-facebook fa-2xl col-3"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank" rel="noopner" aria-label="visit instagram (open in a new tab)"><i class="fa-brands fa-square-instagram fa-2xl col-3"></i></a>
+            </li>
+            <li>
+                <a href="https://linkedin.com" target="_blank" rel="noopner" aria-label="visit linkedin (open in a new tab)"><i class="fa-brands fa-linkedin fa-2xl col-3"></i></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank" rel="noopner" aria-label="visit youtube (open in a new tab)"><i class="fa-brands fa-youtube fa-2xl col-3" style="color: #d91212;"></i></a>
+            </li>
+        </ul>
+        </div>
+    </footer>
 
 </body>
 </html>

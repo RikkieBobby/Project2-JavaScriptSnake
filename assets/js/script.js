@@ -30,6 +30,7 @@ window.onload = function() {
     board.width = cols * blockSize;
     context = board.getContext("2d"); //used to draw on the board
 
+
     placeFood();
     document.addEventListener("keyup", changeDirection); // calls the function called changeDirection when an arrow key is pressed to move the snake - credit to ImKennyYip on GitHub
     //update();
@@ -56,6 +57,7 @@ function update() {
     if (snakeX === foodX && snakeY === foodY) {
         snakeBody.push([foodX, foodY])
         placeFood();
+        incrementScore(); // calls the increment score function 
     }
 
     // array used to move the last piece of the body forward to where the heads last position was to keep the snake together
@@ -117,8 +119,11 @@ function placeFood () {
     foodY = Math.floor(Math.random() * rows) * blockSize;
 }
 
+// function used to increase the score each time food is consumed
 function incrementScore () {
 
+    let currentScore = parseInt(document.getElementById("counter").innerText);
+    document.getElementById("counter").innerText = ++currentScore
 }
 
 function restartGame() {
