@@ -8,14 +8,17 @@ body {
     text-align: center;
     background: whitesmoke;
     box-sizing: border-box;
+    
 }
 
 #main-heading {
     font-family: kablammo;
     font-size: 300%;
+    /*-- code used from W3docs to add a multicolor effect to the heading --*/
     background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
+    /*-- end of W3docs code --*/
 }

@@ -21,6 +21,8 @@ var snakeBody = [];
 var foodX;
 var foodY;
 
+var gameOver = false;
+
 // laods the board onto the page when the page is initialized - credit to ImKennyYip on GitHub
 window.onload = function() {
     board = document.getElementById("board");
@@ -36,6 +38,12 @@ window.onload = function() {
 
 // colors the board black upon loading - credit to ImKennyYip on GitHub
 function update() {
+
+    // sets the game to end when parameters are met
+    if (gameOver) {
+        return; 
+    }
+
 
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
@@ -66,6 +74,19 @@ function update() {
     for (let i = 0; i < snakeBody.length; i++) {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize); // the array used to increase the snake body size
     }
+
+    // game over conditions - credit to ImKennyYip on GitHub
+    if (snakeX < 0  || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
+        gameOver = true;
+        alert("Game Over");
+    } // ends the game if the snake tries to move outside of the board
+
+    for (let i = 0; i < snakeBody.length; i ++) {
+        if (snakeX === snakeBody[i][0] && snakeY === snakeBody[i][1]) {
+            gameOver = true;
+            alert("Game Over");
+        }
+    } // ends the game if the snake comes into contact with itself
 
 }
 
