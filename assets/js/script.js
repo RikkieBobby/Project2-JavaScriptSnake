@@ -14,6 +14,9 @@ var snakeY = blockSize * 5;
 var velocityX = 0;
 var velocityY = 0;
 
+// creates an array that allows to snake to increase in size everytime it moves over the food position - credit to ImKennyYip on GitHub
+var snakeBody = [];
+
 // loads the position of the food onto the board - credit to ImKennyYip on GitHub
 var foodX;
 var foodY;
@@ -33,35 +36,55 @@ window.onload = function() {
 
 // colors the board black upon loading - credit to ImKennyYip on GitHub
 function update() {
+
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
-
-    // loads the color of the snake head and its velocity to the board - credit to ImKennyYip on GitHub
-    context.fillStyle="orange";
-    snakeX += velocityX;
-    snakeY += velocityY;
-    context.fillRect(snakeX, snakeY, blockSize, blockSize);
 
     // loads the color of the food to the board - credit to ImKennyYip on GitHub
     context.fillStyle="red";
     context.fillRect(foodX, foodY, blockSize, blockSize);
+
+    // chnages the position of the food on the board when the snake moves over - credit to ImKennyYip on GitHub
+    if (snakeX === foodX && snakeY === foodY) {
+        snakeBody.push([foodX, foodY])
+        placeFood();
+    }
+
+    // array used to move the last piece of the body forward to where the heads last position was to keep the snake together
+    for (let i = snakeBody.length-1; i > 0; i--) {
+        snakeBody[i] = snakeBody[i-1];
+    }
+    if (snakeBody.length) {
+        snakeBody[0] = [snakeX, snakeY]
+    }
+
+    // loads the color of the snake head and its velocity to the board - credit to ImKennyYip on GitHub
+    context.fillStyle="orange";
+    snakeX += velocityX * blockSize;
+    snakeY += velocityY * blockSize;
+    context.fillRect(snakeX, snakeY, blockSize, blockSize);
+    for (let i = 0; i < snakeBody.length; i++) {
+        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize); // the array used to increase the snake body size
+    }
+
 }
 
 // function used to control the direction and movement of the snake - credit to ImKennyYip on GitHub
 function changeDirection(e) {
-    if (e.code == "ArrowUp") {
+    console.log(e.code);
+    if (e.code == "KeyW" && velocityY != 1) { // here "&& velocity" prevents the snake from being able to turn the opposite direction of where it is going
         velocityX = 0;
         velocityY = -1;
     }
-    else if (e.code == "ArrowDown") {
+    else if (e.code == "KeyS" && velocityY != -1) {
         velocityX = 0;
         velocityY = 1;
     }
-    else if (e.code == "ArrowLeft") {
+    else if (e.code == "KeyA" && velocityX != 1) {
         velocityX = -1;
         velocityY = 0;
     }
-    else if (e.code == "ArrowRight") {
+    else if (e.code == "KeyD" && velocityX != -1) {
         velocityX = 1;
         velocityY = 0;
     }
@@ -71,4 +94,12 @@ function changeDirection(e) {
 function placeFood () {
     foodX = Math.floor(Math.random() * cols) * blockSize;
     foodY = Math.floor(Math.random() * rows) * blockSize;
+}
+
+function incrementScore () {
+
+}
+
+function restartGame() {
+
 }
