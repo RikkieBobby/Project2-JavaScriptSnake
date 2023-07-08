@@ -23,6 +23,16 @@ body {
     /*-- end of W3docs code --*/
 }
 
+#instructions {
+    color: whitesmoke;
+    width: 20%;
+    float: left;
+}
+
+#board {
+    margin-left: -20%;
+}
+
 #score {
     color: whitesmoke;
 }
