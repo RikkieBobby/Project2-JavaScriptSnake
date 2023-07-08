@@ -9,7 +9,10 @@ body {
     text-align: center;
     background: whitesmoke;
     background: url('../images/jungle2.jpg') center center/ cover no-repeat fixed;
+    position: absolute;
 }
+
+/* main-heading and media queries */
 
 #main-heading {
     font-family: kablammo;
@@ -35,11 +38,16 @@ body {
     }
 }
 
+/* end of main-heading and media queries */
+
+/* instructions and media queries */
+
 #instructions {
     color: whitesmoke;
     width: 20%;
     float: left;
     background-color: rgb(255, 168, 0, 0.5);
+    position: relative;
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,8 +62,13 @@ body {
     }
 }
 
+/* end of instructions and media queries */
+
+/* snake board and media queries */
+
 #board {
     margin-left: -20%;
+    position: relative;
 }
 
 @media only screen and (max-width: 600px) {
@@ -68,27 +81,33 @@ body {
 @media only screen and (max-width: 768px) {
     #board {
         width: 100%;
+        margin-left: 1px;
     }
 }
 
-#leader-board {
-    color: whitesmoke;
-}
+/* end of snake board and media queries */
+
 
 #score {
     color: whitesmoke;
+    position: relative;
+}
+
+#restart {
+    position: relative;
 }
 
 
 
 
-
+/* footer and media queries */
 
 footer {
     height: 80px;
     width: 100%;
     background-color: whitesmoke;
-    margin-bottom: 100%;
+    bottom: 0;
+    position: absolute;
 }
 
 @media only screen and (max-width: 600px) {
@@ -107,8 +126,9 @@ footer li {
     list-style: none;
     display: inline-block;
     margin-top: 20px;
-    float: left;
-    margin-left: 15%;
+    letter-spacing: 20%;
 }
+
+/* end of footer and media queries */
 
 
