@@ -29,6 +29,9 @@ window.onload = function() {
     board.height = rows * blockSize;
     board.width = cols * blockSize;
     context = board.getContext("2d"); //used to draw on the board
+    document.getElementById("restart").addEventListener("click", function() {
+        document.location.reload();
+    })
 
 
     placeFood();

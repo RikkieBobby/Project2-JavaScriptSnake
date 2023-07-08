@@ -33,6 +33,10 @@ body {
     margin-left: -20%;
 }
 
+#leader-board {
+    color: whitesmoke;
+}
+
 #score {
     color: whitesmoke;
 }

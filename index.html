@@ -18,9 +18,17 @@
 
     <canvas id="board"></canvas>
 
-    <h2 id="score">Score: <span id="counter">0</span></h2>
+    <div id="leader-board">
+        <span id="first" class="positions">1</span>
+        <span id="second" class="positions">2</span>
+        <span id="third" class="positions">3</span>
+        <span id="fourth" class="positions">4</span>
+        <span id="fifth" class="positions">5</span>
+    </div>
 
-    <button id="restart" onclick="document.location.reload()">Restart</button> <!--the onclick reloads the page when the button is clicked-->
+    <h2 id="score">Score: <span id="counter">0</span></h2> <!--H2 with a span inside targeted in JS to increment the current game score-->
+
+    <button id="restart">Restart</button> <!--the onclick reloads the page when the button is clicked-->
 
     <footer class="row col-12">
         <div class="col-12">
