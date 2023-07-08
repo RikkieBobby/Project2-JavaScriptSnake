@@ -3,11 +3,10 @@
 
 /*-- Global style --*/
 body {
-    width: 100%;
+    width: 97%;
     font-family: orbit, sans-serif;
     text-align: center;
     background: whitesmoke;
-    box-sizing: border-box;
     background: url('../images/jungle2.jpg') center center/ cover no-repeat fixed;
 }
 
@@ -23,14 +22,45 @@ body {
     /*-- end of W3docs code --*/
 }
 
+@media only screen and (max-width: 600px) {
+    #main-heading {
+        width: 100%;
+    }
+}
+
 #instructions {
     color: whitesmoke;
     width: 20%;
     float: left;
+    background-color: rgb(255, 168, 0, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+    #instructions {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #instructions {
+        width: 100%;
+    }
 }
 
 #board {
-    margin-left: -20%;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #board {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #board {
+        width: 100%;
+    }
 }
 
 #leader-board {
@@ -47,13 +77,28 @@ body {
 
 
 footer {
-    height: 150px;
-    float: right;
+    height: 80px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-bottom: 100%;
 }
 
 footer li {
-    list-style: none;
-    margin-left: 20%;
+list-style: none;
+font-size: x-large;
+
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
 }
 
 
@@ -87,3 +132,4 @@ footer li {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
+  
