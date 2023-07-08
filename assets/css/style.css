@@ -4,13 +4,15 @@
 /*-- Global style --*/
 body {
     width: 100%;
-    height: 1000px;
+    height: 1300px;
     font-family: orbit, sans-serif;
     text-align: center;
     background: whitesmoke;
     background: url('../images/jungle2.jpg') center center/ cover no-repeat fixed;
     position: absolute;
 }
+
+
 
 /* main-heading and media queries */
 
@@ -38,6 +40,13 @@ body {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    #main-heading {
+        width: 100%;
+    }
+}
+
+
 /* end of main-heading and media queries */
 
 /* instructions and media queries */
@@ -62,6 +71,13 @@ body {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    #instructions {
+        width: 100%;
+    }
+}
+
+
 /* end of instructions and media queries */
 
 /* snake board and media queries */
@@ -79,6 +95,13 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    #board {
+        width: 100%;
+        margin-left: 1px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
     #board {
         width: 100%;
         margin-left: 1px;
@@ -110,23 +133,11 @@ footer {
     position: absolute;
 }
 
-@media only screen and (max-width: 600px) {
-    footer {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    footer {
-        width: 100%;
-    }
-}
 
 footer li {
     list-style: none;
     display: inline-block;
     margin-top: 20px;
-    letter-spacing: 20%;
 }
 
 /* end of footer and media queries */
