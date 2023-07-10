@@ -30,7 +30,7 @@ window.onload = function() {
     board.width = cols * blockSize;
     context = board.getContext("2d"); //used to draw on the board
     document.getElementById("restart").addEventListener("click", function() {
-        document.location.reload();
+        document.location.reload(); //refreshes the page when the restart button is clicked
     })
 
 
@@ -63,7 +63,7 @@ function update() {
         incrementScore(); // calls the increment score function 
     }
 
-    // array used to move the last piece of the body forward to where the heads last position was to keep the snake together
+    // array used to move the last piece of the body forward to where the heads last position was to keep the snake together - credit to ImKennyYip on GitHub
     for (let i = snakeBody.length-1; i > 0; i--) {
         snakeBody[i] = snakeBody[i-1];
     }
@@ -127,8 +127,4 @@ function incrementScore () {
 
     let currentScore = parseInt(document.getElementById("counter").innerText);
     document.getElementById("counter").innerText = ++currentScore
-}
-
-function restartGame() {
-
 }
