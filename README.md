@@ -1,4 +1,7 @@
+# JavaScript Snake
+JavaScript Snake is an interactive website designed and targeted for kids 
 
+You can find the live site [here](https://amyoshea.github.io/MS2-KidzQuiz/).
 
 
 

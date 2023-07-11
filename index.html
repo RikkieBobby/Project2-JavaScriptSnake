@@ -25,6 +25,14 @@
 
     <button id="restart">Restart</button> <!--reloads the page when the button is clicked-->
 
+    <div id="record-score">
+        <h2 id="name-inst">Enter your name below to join the score board:</h2>
+        <form>
+            <input type="text" name="username" id="username" placeholder="Your Name!" required>
+            <input type="submit" id="save-high-score" onclick="saveHighScore(event)" value="Save" disabled>
+        </form>
+    </div>
+
     <!-- footer with links to social media that open in a new tab when clicked -->
     <footer>
         <div>
@@ -39,7 +47,7 @@
                 <a href="https://linkedin.com" target="_blank" rel="noopner" aria-label="visit linkedin (open in a new tab)"><i class="fa-brands fa-linkedin fa-2xl "></i></a>
             </li>
             <li>
-                <a href="https://www.youtube.com" target="_blank" rel="noopner" aria-label="visit youtube (open in a new tab)"><i class="fa-brands fa-youtube fa-2xl style="color: #d91212;"></i></a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopner" aria-label="visit youtube (open in a new tab)"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i></a>
             </li>
         </ul>
         </div>
