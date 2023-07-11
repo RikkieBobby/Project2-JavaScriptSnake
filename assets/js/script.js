@@ -31,14 +31,14 @@ window.onload = function() {
     context = board.getContext("2d"); //used to draw on the board
     document.getElementById("restart").addEventListener("click", function() {
         document.location.reload(); //refreshes the page when the restart button is clicked
-    })
+    });
 
 
     placeFood();
     document.addEventListener("keyup", changeDirection); // calls the function called changeDirection when an arrow key is pressed to move the snake - credit to ImKennyYip on GitHub
     //update();
     setInterval(update, 1000/10); // runs the update function every 100 miliseconds to move the position of the snake on the board - credit to ImKennyYip on GitHub
-}
+};
 
 // colors the board black upon loading - credit to ImKennyYip on GitHub
 function update() {
@@ -58,7 +58,7 @@ function update() {
 
     // chnages the position of the food on the board when the snake moves over - credit to ImKennyYip on GitHub
     if (snakeX === foodX && snakeY === foodY) {
-        snakeBody.push([foodX, foodY])
+        snakeBody.push([foodX, foodY]);
         placeFood();
         incrementScore(); // calls the increment score function 
     }
@@ -68,7 +68,7 @@ function update() {
         snakeBody[i] = snakeBody[i-1];
     }
     if (snakeBody.length) {
-        snakeBody[0] = [snakeX, snakeY]
+        snakeBody[0] = [snakeX, snakeY];
     }
 
     // loads the color of the snake head and its velocity to the board - credit to ImKennyYip on GitHub
@@ -126,5 +126,5 @@ function placeFood () {
 function incrementScore () {
 
     let currentScore = parseInt(document.getElementById("counter").innerText);
-    document.getElementById("counter").innerText = ++currentScore
+    document.getElementById("counter").innerText = ++currentScore;
 }
