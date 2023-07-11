@@ -1,5 +1,5 @@
 
-// snake board - credit to ImKennyYip on GitHub: creates the borad in the canvas on the HTML document
+// snake board - creates the borad in the canvas on the HTML document - credit to ImKennyYip on GitHub
 var blockSize = 25;
 var rows = 20;
 var cols = 30;
