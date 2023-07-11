@@ -53,10 +53,11 @@ body {
 
 #instructions {
     color: whitesmoke;
-    width: 20%;
-    float: left;
+    width: 80%;
     background-color: rgb(255, 168, 0, 0.5);
     position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,7 +84,6 @@ body {
 /* snake board and media queries */
 
 #board {
-    margin-left: -20%;
     position: relative;
 }
 
