@@ -46,7 +46,6 @@ body {
     }
 }
 
-
 /* end of main-heading and media queries */
 
 /* instructions and media queries */
@@ -77,7 +76,6 @@ body {
         width: 100%;
     }
 }
-
 
 /* end of instructions and media queries */
 
@@ -110,21 +108,19 @@ body {
 
 /* end of snake board and media queries */
 
-
+/* score counter */
 #score {
     color: whitesmoke;
     position: relative;
 }
 
+/* restart button */
 #restart {
     position: relative;
     height: 50px;
     width: 100px;
     border-radius: 5px;
 }
-
-
-
 
 /* footer and media queries */
 
