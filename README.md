@@ -51,7 +51,7 @@ The overall feel of the website was create a type of jungle theme that would be 
 As stated before, the overall theme was to create a jungle style for the snake game while also giving enough contrast to make the page more interesting and allowing the text to be readable, so I used a mix of greens, red and orange to convey this while keeping the text white to be more clearer
 ![Colour scheme](assets/images/colorscheme.jpg.png)
 ### Typography
-In keeping with the jubgle theme, I decided to use the [kablammo](https://fonts.google.com/specimen/Kablammo?query=kablammo) for headings to give the page a playful and edgy look, and for the text in the body I used [orbit](https://fonts.google.com/specimen/Orbit?preview.text=howiye&preview.text_type=custom&query=orbit) as I liked the way it conveyed a slightly retro style similar to old school space invaders.
+In keeping with the jubgle theme, I decided to use the [kablammo](https://fonts.google.com/specimen/Kablammo?query=kablammo) for headings to give the page a playful and edgy look, and for the text in the body I used [orbit](https://fonts.google.com/specimen/Orbit?preview.text=howiye&preview.text_type=custom&query=orbit) as I liked the way it conveyed a slightly retro style similar to old school space invaders. Both fonts were taken from [googlefonts](https://fonts.google.com/)
 ---
 ---
 # Features
