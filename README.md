@@ -105,7 +105,7 @@ I used Chromes Lighthouse tools to test site performance. I check bothed desktop
 ### Lighthouse Mobile
 ![Lighthouse Mobile](assets/images/lighthousemobile.png)
 ## Bugs and Fixes
-+ One bug which I encountered was that when the snake game was linked up to be played using the arrow keys on the keyboard, it would move the webpage up and down and side to side which made it difficult to react to what was happening, to fix this I decided to switch from using the arrow keys in the change direction function to the WASD keys instead which solved to issue easily.
++ One bug which I encountered was that when the snake game was linked up to be played using the arrow keys on the keyboard, it would move the webpage up and down and side to side which made it difficult to react to what was happening, to fix this I decided to switch from using the arrow keys in the change direction function to the WASD keys instead which solved the issue easily.
 + another bug I encountered was the appearence of and x scroll on the webpage which was not intended to be there, though small, it does distract from the user experience slightly. I tried fixing this by reducing the with of the body in CSS, but made the page look rather messy, still working on a fix for this at the moment.
 # Deployment
 ## Deployment through GitHub Pages
