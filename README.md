@@ -1,5 +1,5 @@
 # JavaScript Snake
-JavaScript Snake is an interactive website designed and targeted for kids 
+JavaScript Snake is an interactive website designed and targeted for kids. The site itself is primarilly aimed at children between the ages of 7-11 years old, the site can be used as a way to help sharpen their reflexs by playing the game while also adding a competitive element by trying to get the best score, it can also be used to help them become familiar with using a keyboard.
 
 You can find the live site [here](https://amyoshea.github.io/MS2-KidzQuiz/).
 
