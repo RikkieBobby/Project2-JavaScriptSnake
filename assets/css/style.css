@@ -123,17 +123,6 @@ body {
     border-radius: 5px;
 }
 
-#record-score {
-    width: 40%;
-    margin: 0 auto;
-    background-color: rgb(255, 168, 0, 0.5);
-    border-radius: 5px;
-}
-
-#name-inst {
-    color: whitesmoke;
-}
-
 /* footer and media queries */
 
 footer {

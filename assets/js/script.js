@@ -34,9 +34,10 @@ window.onload = function() {
     });
 
 
-    placeFood();
+    placeFood(); 
+
     document.addEventListener("keyup", changeDirection); // calls the function called changeDirection when an arrow key is pressed to move the snake - credit to ImKennyYip on GitHub
-    //update();
+
     setInterval(update, 1000/10); // runs the update function every 100 miliseconds to move the position of the snake on the board - credit to ImKennyYip on GitHub
 };
 
